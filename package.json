@@ -1,0 +1,35 @@
+{
+  "name": "webrtc-dev-platform",
+  "version": "1.0.0",
+  "description": "WebRTC Development Platform using SIP.js and FreeSWITCH",
+  "main": "index.js",
+  "scripts": {
+    "dev": "docker-compose up -d",
+    "build": "docker-compose build",
+    "stop": "docker-compose down",
+    "logs": "docker-compose logs -f",
+    "setup": "npm run setup:web && npm run setup:api",
+    "setup:web": "cd web && npm install",
+    "setup:api": "cd api && npm install",
+    "test": "npm run test:web && npm run test:api",
+    "test:web": "cd web && npm test",
+    "test:api": "cd api && npm test"
+  },
+  "keywords": [
+    "webrtc",
+    "sip.js",
+    "freeswitch",
+    "voip",
+    "video-calling",
+    "real-time-communication"
+  ],
+  "author": "WebRTC Development Team",
+  "license": "MIT",
+  "devDependencies": {
+    "docker-compose": "^0.24.2"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  }
+}
